@@ -15,9 +15,10 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 body {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	color: #333;
+	color: #000;
 	font-size: 20px;
 	font-weight: 100;
+	background: lightgrey;
 }
 
 h1, h2, h3, h4, h5 {
@@ -33,10 +34,6 @@ input[type="submit"] {
   outline: none;
 }
 
-input[type="submit"]:hover {
-	background-color: pink;
-	transition: 0.4s all ease;
-}
 
 input:focus::-webkit-input-placeholder {
     opacity: 0;
@@ -46,13 +43,73 @@ input:focus::-webkit-input-placeholder {
 
 // ==========================================================================
 
+h1 {
+	text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
 
 
+// ==============================
+// SEARCH BAR
+// ==============================
+ 
+.box {
+	display: block;
+}
+
+.container{
+  position: relative;
+  width:400px;
+  margin:0 auto;
+}
+
+.container input#search{
+  height: 50px;
+  width: 100%;
+  background: #2b303b;
+  border: none;
+  font-size: 14pt;
+  color: #63717f;
+  padding-left: 45px;
+  transition: background .55s ease;
+  border-radius: 5px;
+  }
+
+.icon{
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 14px;
+  background-image: url('../dist/images/magnifier13.png');
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+}
+
+.container input#search:hover, .container input#search:focus, .container input#search:active{
+    outline:none;
+    background: #fff;
+  }
 
 
+// ==============================
+// MOVE CONTENT LAYOUT
+// ==============================
 
+.section-wrap {
+  width: 95%; 
+  margin: 40px auto;
+}
 
+.movie-content {
+  margin-left: 40px;
+  width: 35%;
+  float: left;
+}
 
+.tomacco {
+  width: 55%;
+  float: left;
+}
 
 
 
