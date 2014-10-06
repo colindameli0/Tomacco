@@ -31,9 +31,24 @@ function searchCallback(data) {
 	// arr.push(criticScore);
 	
   if (movie.ratings.critics_score >=0) {
-     $(document.body).append('<h1>' + movie.title + '</h1>');
-     $(document.body).append('<h3>' + "Critic's score "+ movie.ratings.critics_score + '</h3>');
-     $(document.body).append('<img src="' + movie.posters.thumbnail + '" />')
+     $(document.body).append('<div><h1>' + "Critic's score "+ movie.ratings.critics_score + '</h1></div>');
+     $('.movie-title').append('<h1>' + movie.title + '</h1>');
+     $('.movie-title').append('<h1>' + movie.year + '</h1>');
+     // console.log(movie.abridged_directors[].name)
+     // $(document.body).append('<h1>' + movie.abridged_directors[0].name + '</h1>');
+
+     var arrayLength = movie.abridged_cast.length;
+     for (var i=0; i < arrayLength; i++) {
+      cast = movie.abridged_cast[i].name;
+      console.log(cast)
+      $(document.body).append('<h1>' + cast + '</h1>');
+     } 
+
+
+    // var cast = movie.abridged_cast[]
+    // var director = movie.abridged_directors[0]
+    // $(document.body).append('<h1>' + director.name + '</h1>');
+     // $(document.body).append('<img src="' + movie.posters.thumbnail + '" />')
   
    };
  });
